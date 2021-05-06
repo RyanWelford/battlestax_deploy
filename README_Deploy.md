@@ -1,0 +1,1 @@
+Welcome to **BattleStax**, a [JAMStack](https://jamstack.org/) game that uses [Netlify](https://www.netlify.com/jamstack/), [DataStax Astra](https://dtsx.io/workshop), and [GitHub](https://github.com/) to demonstrate how to build and deploy an application using modern, scalable architectures.
