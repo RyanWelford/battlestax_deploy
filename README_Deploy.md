@@ -2,7 +2,6 @@
 
 [![License Apache2](https://img.shields.io/hexpm/l/plug.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 [![Discord](https://img.shields.io/discord/685554030159593522)](https://discord.com/widget?id=685554030159593522&theme=dark)
-[![Actions Status](https://github.com/DataStax-Academy/battlestax/workflows/BattleStax%20Tests/badge.svg)](https://github.com/DataStax-Academy/battlestax/actions) 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e265340f-c6a6-4d7b-b24c-438b87c67876/deploy-status)](https://app.netlify.com/sites/battlestax-tutorial/deploys)
 
 Welcome to **BattleStax**. In this workshop, we will give an overview of how to deploy a [JAMStack](https://jamstack.org/) game that uses [Netlify](https://www.netlify.com/jamstack/), [DataStax Astra](https://dtsx.io/workshop), and [GitHub](https://github.com/). 
@@ -39,12 +38,6 @@ Join our discord room [*The Fellowship of the Rings*](https://discord.com/widget
 - **Step 2 - Implement a Serverless Data API**
   - 📚 [What is DataStax Astra and Stargate](./README_Astra_Stargate.md)
   - ⚒️ [Implement a CRUD Api in Astra](./README_step02.md) (*branch: `step-2`*)
-- **Step 3 - Client and State Management with Redux**
-  - 📚 [What is Redux](./README_Redux.md)  
-  - ⚒️ [Create Redux slice](./README_step03.md) (*branch: `step-3`*)
-- **Step 4 - React stuff**
-  - 📚 [What is React](./README_React.md)   
-  - ⚒️ [Bind Redux to the User Interface](./README_step04.md) (*branch: `step-4`*)
 - **What's NEXT ?** *(not the framework* 😈)
   - 📚 [Extra Resources and certifications](./README_Resources.md)   
   - 💚 [Share the love](./README_Ending.md)
