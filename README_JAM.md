@@ -1,8 +1,7 @@
 # What is the JAM Stack ? 
 
-🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 **[What is the JAMStack](#)** | ***next=>**  ⚒️ [Setup and deploy your first app](./README_step00.md)*
+🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 **[What is the JAMStack](#)** | ***back=>**  ⚒️ [Deploy a JAMStack App](./README.md)*
 
-If you are already familiar with **JAMStack** and just want to move on to the first exercise go to the next section => *[Setup and deploy your first app](./README_step00.md)*. Otherwise, read on.
 
 1. [Introduction to the JAMStack](#1-introduction-to-the-jamstack)
 2. [Why this is cool ?](#2-why-this-is-cool-)
@@ -179,4 +178,4 @@ Let us show you this one today
 
 **Click** below to move to the next section.
 
-🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 **[What is the JAMStack](#)** | ***next=>**  ⚒️ [Setup and deploy your first app](./README_step00.md)*
+🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 **[What is the JAMStack](#)** | ***back=>**  ⚒️ [Deploy a JAMStack App](./README.md)*
