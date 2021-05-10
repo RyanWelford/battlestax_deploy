@@ -69,15 +69,20 @@ Here we provide netlify with some commands and a reference to where in our proje
 So in our functions folder we have all the endpoints our app needs. Let's take a look at one (insertGame.js)
 
 ### Serverless Functions
-```javascript
-exports.handler = async (event, context) => {
-  // let's return a JSON response that looks like: { hello: "world" }
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ hello: "world" }),
+
+<details>
+  <summary>helloWorld.js</summary>
+  </br>
+  ```javascript
+  exports.handler = async (event, context) => {
+    // let's return a JSON response that looks like: { hello: "world" }
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ hello: "world" }),
+    };
   };
-};
-```
+  ```
+</details>
 
 and a a real example:
 
