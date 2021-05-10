@@ -70,52 +70,59 @@ So in our functions folder we have all the endpoints our app needs. Let's take a
 
 ### Serverless Functions
 
-
-```javascript
-exports.handler = async (event, context) => {
-  // let's return a JSON response that looks like: { hello: "world" }
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ hello: "world" }),
-  };
-};
-```
-
-and a a real example:
-
-```javascript
-const { getGamesCollection } = require("./utils/astraClient");
-
-exports.handler = async (event, context) => {
-  let gameId;
-  let gamePayload;
-  try {
-    gameId = event.path.split("insertGame/")[1];
-    gamePayload = JSON.parse(event.body);
-  } catch (e) {
-    return {
-      statusCode: 400,
-      body: JSON.stringify({ message: "must provide a valid game ID" }),
-    };
-  }
-
-  const gamesCollection = await getGamesCollection();
-
-  try {
-    const res = await gamesCollection.create(gameId, gamePayload);
+<details>
+  <summary>helloWorld.js</summary>
+  
+  ```javascript
+  exports.handler = async (event, context) => {
+    // let's return a JSON response that looks like: { hello: "world" }
     return {
       statusCode: 200,
-      body: JSON.stringify(res),
+      body: JSON.stringify({ hello: "world" }),
     };
-  } catch (e) {
-    console.error(e);
-    return {
-      statusCode: 500,
-      body: JSON.stringify(e),
-    };
-  }
-};
-```
+  };
+  ```
+</details>
+
+and a real example:
+
+<details>
+  <summary>insertGame.js</summary>
+  
+  ```javascript
+  const { getGamesCollection } = require("./utils/astraClient");
+
+  exports.handler = async (event, context) => {
+    let gameId;
+    let gamePayload;
+    try {
+      gameId = event.path.split("insertGame/")[1];
+      gamePayload = JSON.parse(event.body);
+    } catch (e) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ message: "must provide a valid game ID" }),
+      };
+    }
+
+    const gamesCollection = await getGamesCollection();
+
+    try {
+      const res = await gamesCollection.create(gameId, gamePayload);
+      return {
+        statusCode: 200,
+        body: JSON.stringify(res),
+      };
+    } catch (e) {
+      console.error(e);
+      return {
+        statusCode: 500,
+        body: JSON.stringify(e),
+      };
+    }
+  };
+  ```
+</details>
 
 
 Netlify only has master at this point, let's push the full-game branch
