@@ -1,4 +1,4 @@
-# 🚀 JamStack + 🧑‍💻 Workshop
+# 🚀 Deploy a JAMStack App + 🧑‍💻 Workshop
 
 [![License Apache2](https://img.shields.io/hexpm/l/plug.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 [![Discord](https://img.shields.io/discord/685554030159593522)](https://discord.com/widget?id=685554030159593522&theme=dark)
@@ -25,21 +25,56 @@ Join our discord room [*The Fellowship of the Rings*](https://discord.com/widget
 [![stream](./tutorial/discord.png)](https://discord.com/widget?id=685554030159593522&theme=dark)
 
 
-## 🗓️ Table of Contents
+# Let's get Started
 
-*All the tutorials and readme files are on the **master**. The **bootstraping** step is mandatory for you do the exercises. Then, checkout the branch you need to jump to any step. Get a look at all branches [here](https://github.com/DataStax-Academy/battlestax/branches)*
+## What is JAMStack?
+Take a look at 📚 [What is the JAMStack](./README_JAM.md) to learn more in depth on how JAMStack functions, then come back here and we'll get started.
 
-- **Bootstraping**
-  - 📚 [What is the JAMStack](./README_JAM.md)
-  - ⚒️ [Setup and deploy your first app](./README_step00.md) *(master)*
-- **Step 1 - Serverless**
-  - 📚 [What can Netlify do for you](./README_Netlify.md)
-  - ⚒️ [Expose your "hello world" API](./README_step01.md) (*branch: `step-1`*)
-- **Step 2 - Implement a Serverless Data API**
-  - 📚 [What is DataStax Astra and Stargate](./README_Astra_Stargate.md)
-  - ⚒️ [Implement a CRUD Api in Astra](./README_step02.md) (*branch: `step-2`*)
-- **What's NEXT ?** *(not the framework* 😈)
-  - 📚 [Extra Resources and certifications](./README_Resources.md)   
-  - 💚 [Share the love](./README_Ending.md)
+## Setup Repository
 
-**🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents)** | ***next=>** 📚 [What is the JAMStack](./README_JAM.md)*
+### GitHub
+- Use this Template
+  - include all branches
+- GITPOD LINK
+- git checkout full-game
+- npm install
+
+### Astra
+- db name: battlestax_db
+- keyspace: battlestax
+- get environment vars
+
+### Back to GitPod
+- cp .env.example .env
+- replace with env vars
+- get auth token, and add
+- Test. npm run test:functions
+
+Awesome!
+So what were these functions we just tested?
+We talked about how JAMStack utilizes a CDN to host and distribute our app, in this case Netlify. These functions are the serverless functions that Netlify  uses to create api endpoints for the rest of our app. Let's set up Netlify and it will become more clear.
+
+
+### Setup Netlify
+- Go to https://www.netlify.com/ and create an account
+- Create new site from git
+- select repo
+- click advanced deploy
+- fill in environment vars
+- Deploy site
+
+While that is working, lets take a look at our code again.
+We have a file here called netlify.toml
+Here we provide netlify with some commands and a reference to where in our project we are storing our serverless functions
+So in our functions folder we have all the endpoints our app needs. Let's take a look at one (insertGame.js)
+
+### Serverless Functions
+<img width="1125" alt="battlestaxDeploy_helloWorld" src="https://user-images.githubusercontent.com/77289188/117591394-e299af00-b0f9-11eb-88e0-165a4edc4ca5.png">
+
+
+Netlify only has master at this point, let's push the full-game branch
+git push -f origin full-game:master
+As you can see, Netlify already sees the new update and is building the new deploy
+
+
+
