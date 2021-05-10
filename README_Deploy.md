@@ -69,7 +69,15 @@ Here we provide netlify with some commands and a reference to where in our proje
 So in our functions folder we have all the endpoints our app needs. Let's take a look at one (insertGame.js)
 
 ### Serverless Functions
-<img width="1125" alt="battlestaxDeploy_helloWorld" src="https://user-images.githubusercontent.com/77289188/117591394-e299af00-b0f9-11eb-88e0-165a4edc4ca5.png">
+```javascript
+exports.handler = async (event, context) => {
+  // let's return a JSON response that looks like: { hello: "world" }
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ hello: "world" }),
+  };
+};
+```
 
 
 Netlify only has master at this point, let's push the full-game branch
